@@ -1,0 +1,171 @@
+body {
+  font-family: 'Arial', sans-serif;
+  font-size: 18px; /* Increased base font size */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.table-wrapper {
+  overflow: hidden; /* Hide overflow for the main wrapper */
+}
+
+.table-content {
+  display: block;
+  max-width: calc(150px + 150px + 5* 220px); /* Ensure 4 variant columns are visible, + two fixed columns */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  white-space: nowrap; /* Ensure that all cells stay on one line for horizontal scroll */
+}
+
+.table-auto {
+  width: 100%;
+  border-collapse: collapse; /* Remove space between borders */
+}
+
+.table-auto th,
+.table-auto td {
+  padding: 20px; /* Increased padding for more space between text */
+  text-align: center;
+  font-size: 18px; /* Increased font size for table cells */
+  border: 1px solid #ddd; /* Add border between cells for clarity */
+}
+
+.fixed-width {
+  width: 150px; /* Fixed width for the first two columns */
+  position: sticky;
+  left: 0;
+  background: white;
+  z-index: 2;
+}
+
+.variant-columns-header {
+  position: relative;
+}
+
+.variant-cell {
+  min-width: 220px; /* Width for variant columns */
+  width: 220px;
+  padding: 25px; /* More padding for cells */
+}
+
+.row-shadow {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Deeper shadow for rows */
+  margin-bottom: 15px; /* Add space between rows */
+  transition: box-shadow 0.3s ease;
+}
+
+.row-shadow:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); /* Increased lift effect on hover */
+}
+
+.add-column-cell {
+  text-align: center;
+}
+
+.add-design-btn {
+  padding: 12px 25px; /* Increase button size */
+  font-size: 18px; /* Larger font for buttons */
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px; /* More rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-design-btn:hover {
+  background-color: #0056b3;
+}
+
+.drag-handle {
+  cursor: grab;
+  margin-right: 15px; /* Add more spacing for better appearance */
+  display: inline-block;
+  font-size: 22px; /* Increase symbol size */
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.image-grid {
+  background: white;
+  border-radius: 8px;
+  padding: 25px; /* Increase padding for image grid */
+  width: 80%;
+  max-width: 700px; /* Larger max width */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px; /* Increase gap between images */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.image-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-item img {
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); /* Deeper shadow for images */
+}
+
+.close-grid {
+  grid-column: span 4;
+  margin-top: 20px; /* Increase space above the close button */
+  padding: 12px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 18px; /* Larger font size for close button */
+}
+
+.variant-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+.MuiIconButton-root {
+  font-size: 28px; /* Increase icon size */
+}
+
+.delete-column-icon {
+  margin-left: 8px; /* Increase margin for delete icons */
+}
+
+.delete-column-menu {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 25px; /* Larger padding for the delete menu */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  z-index: 1001;
+  border-radius: 8px;
+}
+
+.delete-column-menu button {
+  margin: 10px; /* Increase spacing between buttons */
+  padding: 12px 20px; /* Larger buttons for delete menu */
+  font-size: 18px; /* Larger font for buttons */
+}
