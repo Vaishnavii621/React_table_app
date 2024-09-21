@@ -3,8 +3,8 @@ Setup and Run the Project
 
 First, clone the repository to your local machine:
 
-git clone <repository-url>
-cd <project-directory>
+git clone repository-url
+cd project-directory
 
 
 2. Install Dependencies
