@@ -4,6 +4,7 @@ Setup and Run the Project
 First, clone the repository to your local machine:
 
 git clone repository-url
+
 cd project-directory
 
 
@@ -22,6 +23,7 @@ To start the development server and run the app locally:
 npm start
 
 This will launch the app in development mode and open it in your default browser at:
+
 http://localhost:3000
 
 4. Build the App for Production
@@ -29,9 +31,12 @@ http://localhost:3000
 To create an optimized production build, run:
 
 npm run build
+
+
 The production-ready files will be generated in the build directory.
 
 
 5. This application is deployed on vercel.
+
 
 Link: https://react-table-app-dusky.vercel.app/
